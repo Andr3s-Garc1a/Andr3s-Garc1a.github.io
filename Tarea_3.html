@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+    <FONT SIZE=50; FONT COLOR="black" >CAMPEONES DE MUNDIAL DE FUTBOL </FONT>
+    </center>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('myChart');
+        var barColors = ["aqua","blue","red", "green","orange","brown","green","white"];
+        
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Argentina', 'Francia', 'España','Italia', 'Alemania', 'Uruguay', 'Brasil', 'Inglaterra'],
+                datasets: [{
+                    label: '# Copas del mundo',
+                    data: [3, 2, 1, 4, 4, 2, 5, 1],
+                    backgroundColor: barColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                
+                scales: {
+                    y: {
+                        beginAtZero: true     
+                    }
+                }    
+            }
+
+            
+        });
+    </script>
+    
+    <style>
+        body{
+            background-image: url(Fondo.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+    </style>
+
+
+
+</body>
+
+
+
+
+</html>
